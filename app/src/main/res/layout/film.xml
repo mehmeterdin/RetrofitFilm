@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:clickable="true"
+    android:id="@+id/filmYerleskesi">
+
+    <ImageView
+        android:id="@+id/filmResmi"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/filmAdi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:text="Film Adı"
+        android:layout_toRightOf="@+id/filmResmi"
+        android:layout_alignTop="@+id/filmResmi"
+        android:textColor="#ff000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false" />
+
+    <TextView
+        android:id="@+id/filAdiIngilizce"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:text="Film Adı İngilizce"
+        android:layout_toRightOf="@+id/filmResmi"
+        android:textColor="#ff5d5d5d"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@id/filmAdi"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/ImdbPuani"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filAdiIngilizce"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/filmResmi"
+        android:textSize="13dp"
+        android:text="IMBD Puanı"/>
+
+    <RatingBar
+        android:id="@+id/imdbPuaniYildiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImdbPuani"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/filmResmi"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="10"
+        android:rating="10"/>
+
+    <TextView
+        android:id="@+id/kategori"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imdbPuaniYildiz"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/filmResmi"
+        android:textColor="#666666"
+        android:textSize="13dp"
+        android:text="Kategori"/>
+
+
+    <TextView
+        android:id="@+id/cikisTarihi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#888888"
+        android:textSize="12dp"
+        android:text="Çıkış Tarihi"/>
+</RelativeLayout>
